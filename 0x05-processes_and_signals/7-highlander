@@ -9,6 +9,6 @@ trap terminate SIGTERM
 
 while true
 do
-	echo "To infinity and beyond"
+	echo "ok"
 	sleep 2
 done

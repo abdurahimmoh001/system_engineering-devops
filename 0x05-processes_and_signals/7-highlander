@@ -9,6 +9,6 @@ trap terminate SIGTERM
 
 while true
 do
-	echo "ok"
+	echo "I am invincible!!!"
 	sleep 2
 done

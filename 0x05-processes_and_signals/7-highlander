@@ -1,20 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Displays "I am invincible!!!" when receiving a sigterm signal 
 
-# Function to handle SIGTERM signal
-# When SIGTERM is received, it prints "I am invincible!!!" and then returns,
-# allowing the main loop to continue.
-handle_sigterm() {
-    echo "I am invincible!!!"
+terminate() {
+	echo "I am invincible!!!"
 }
 
-# Trap the SIGTERM signal (signal number 15) and call the handle_sigterm function
-# when it is received.
-trap 'handle_sigterm' SIGTERM
+trap terminate SIGTERM
 
-echo "Starting 7-highlander. PID: $$" # Print PID for easy identification
-
-# Infinite loop
-while true; do
-    echo "To infinity and beyond"
-    sleep 2
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
 done
